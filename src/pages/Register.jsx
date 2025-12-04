@@ -136,7 +136,13 @@ export default function Register() {
               </div>
 
               <p className="text-center text-muted small">
-                Sudah punya akun? <a href="/login">Masuk</a>
+                Sudah punya akun?{" "}
+                <span
+                  className="text-primary cursor-pointer"
+                  onClick={() => navigate("/login")}
+                >
+                  Masuk
+                </span>
               </p>
             </Form>
           </Card>

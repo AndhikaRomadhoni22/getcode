@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Card, Container, Row, Col } from "react-bootstrap";
-import { FaUser, FaLock } from "react-icons/fa6"; 
+import { FaUser, FaLock } from "react-icons/fa6";
 import Swal from "sweetalert2";
 
 export default function Login() {
@@ -30,7 +30,7 @@ export default function Login() {
 
     if (foundUser) {
       localStorage.setItem("loginData", JSON.stringify(foundUser));
-        Swal.fire({
+      Swal.fire({
         icon: "success",
         title: "Login Berhasil!",
         text: `Selamat datang, ${foundUser.username}!`,
@@ -40,7 +40,6 @@ export default function Login() {
       }).then(() => {
         navigate("/");
       });
-
     } else {
       Swal.fire({
         icon: "error",
@@ -95,13 +94,23 @@ export default function Login() {
               </Form.Group>
 
               <div className="d-grid mb-3">
-                <Button type="submit" variant="primary" className="btn btn-primary rounded-3">
+                <Button
+                  type="submit"
+                  variant="primary"
+                  className="btn btn-primary rounded-3"
+                >
                   Masuk
                 </Button>
               </div>
 
               <p className="text-center text-muted small">
-                Belum punya akun? <a href="/register"> Daftar</a>
+                Belum punya akun?{" "}
+                <span
+                  className="text-primary cursor-pointer"
+                  onClick={() => navigate("/register")}
+                >
+                  Daftar
+                </span>
               </p>
             </Form>
           </Card>
