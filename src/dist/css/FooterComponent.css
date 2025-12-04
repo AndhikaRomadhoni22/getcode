@@ -1,0 +1,37 @@
+:root {
+  --bs-primary: #4169e1 !important;
+  --primary-color: #4169e1 !important;
+  --secondary-color: #231942 !important;
+}
+footer .text-muted {
+  color: #aaa !important;
+}
+/* Style dasar link menu di footer */
+.footer-menu a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-bottom: 2px; /* biar ada ruang buat underline */
+}
+
+/* Efek hover warna */
+.footer-menu a:hover {
+  color: var(--primary-color); 
+}
+
+/* Animasi underline */
+.footer-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.footer-menu a:hover::after {
+  width: 100%;
+}

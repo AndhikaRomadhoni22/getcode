@@ -1,0 +1,121 @@
+body {
+  font-family: "Kanit", sans-serif !important;
+}
+:root {
+  --bs-primary: #4169e1 !important;
+  --primary-color: #4169e1 !important;
+  --secondary-color: #231942 !important;
+}
+
+/* Warna Button Primary */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #3652c0 !important; /* hover lebih gelap */
+  border-color: #3652c0 !important;
+}
+/* Outline primary button */
+.btn-outline-primary {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--bs-primary) !important;
+  color: white !important;
+  border-color: var(--bs-primary) !important;
+}
+
+/* Style Responsif img */
+/* Default */
+.hero-img {
+  margin-top: 0;
+}
+
+/* Tablet (bootstrap md = 768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .hero-img {
+    margin-top: -250px;
+  }
+}
+
+/* Mobile kecil (≤ 576px) */
+@media (max-width: 576px) {
+  .hero-img {
+    margin-top: -80px; 
+    width: 60%; 
+    max-height: 300px;
+  }
+}
+
+
+
+/* Style Testimoni */
+/* Tombol bullet */
+.mySwiper .swiper-pagination {
+  position: relative;
+  margin-top: 50px; 
+  text-align: center;
+}
+.mySwiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 6px;
+}
+.mySwiper .swiper-pagination-bullet-active {
+  background-color: #0d6efd; 
+  width: 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease
+}
+
+/* Style ScrollToTop */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 9999;
+}
+.scroll-to-top:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* Style Card Kursus */
+.card-shadow {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.card-shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.15); 
+}
+
+/* Style Background login & register */
+.background-bg {
+  background: linear-gradient(135deg, #e6f0ff, #ffffff);
+  background-image: url("/assets/bg.png");
+  background-size: cover;
+  background-position: center;
+}
